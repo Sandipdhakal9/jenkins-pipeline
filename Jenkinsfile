@@ -12,7 +12,7 @@ pipeline{
                     '''
                 }
                 }
-            }
+   
             post{
                 always{
                     echo "========always========"
@@ -23,7 +23,7 @@ pipeline{
                 failure{
                     echo "========A execution failed========"
                 }
-            
+            }
         }
         stage("test"){
             steps{
