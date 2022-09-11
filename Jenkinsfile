@@ -23,7 +23,7 @@ pipeline{
                 failure{
                     echo "========A execution failed========"
                 }
-            }
+            
         }
         stage("test"){
             steps{
