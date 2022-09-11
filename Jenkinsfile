@@ -3,7 +3,6 @@ pipeline{
     stages{
         stage("build"){
             steps{
-            steps{
                 git url: "https://github.com/nkarthikraju/MavenExamples.git"
                 dir("MavenHelloWorldProject"){ //specifiying the pom file directory
                     sh '''
