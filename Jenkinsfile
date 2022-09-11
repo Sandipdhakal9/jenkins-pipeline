@@ -3,7 +3,16 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo "========executing A========"
+            steps{
+                git url: "https://github.com/nkarthikraju/MavenExamples.git"
+                dir("MavenHelloWorldProject"){ //specifiying the pom file directory
+                    sh '''
+                    pwd
+                    ls
+                        mvn clean install
+                    '''
+                }
+                }
             }
             post{
                 always{
